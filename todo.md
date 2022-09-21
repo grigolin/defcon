@@ -17,11 +17,11 @@ https://flowbite.com/blocks/marketing/pricing/
 https://tailwind-elements.com/docs/standard/components/scroll-back-to-top-button/
 
 ##auto text typing effect
-to search*
 https://mattboldt.com/demos/typed-js/
+https://github.com/gerssivaldosantos/gerssivaldosantos.github.io
 
 ##scroll down when click button
-to search*
+https://github.com/cferdinandi/smooth-scroll
 
 ##User Select "select-none"
 see fields that apply*
