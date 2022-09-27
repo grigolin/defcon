@@ -10,8 +10,11 @@ https://tailwindcss.com/docs/installation
 
 ### to do
 
-- [ ]  ajeitar parte dos planos
+- [x]  ajeitar parte dos planos
 https://flowbite.com/blocks/marketing/pricing/
+
+- []  ajeitar parte do cadastro
+https://flowbite.com/blocks/marketing/register/
 
 - [ ]  "Back to top" button
 https://tailwind-elements.com/docs/standard/components/scroll-back-to-top-button/
