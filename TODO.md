@@ -13,7 +13,7 @@ https://tailwindcss.com/docs/installation
 - [x]  ajeitar parte dos planos
 https://flowbite.com/blocks/marketing/pricing/
 
-- []  ajeitar parte do cadastro
+- [ ]  ajeitar parte do cadastro
 https://flowbite.com/blocks/marketing/register/
 
 - [ ]  "Back to top" button
