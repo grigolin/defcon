@@ -25,5 +25,3 @@ https://github.com/cferdinandi/smooth-scroll
 
 - [ ] User Select "select-none"
 see fields that apply*
-
-- [ ] ajeitar botão não funciona a cor (tailwind.config.js)
