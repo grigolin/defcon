@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DEFCON</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
@@ -249,7 +249,7 @@
                 <input type="text" placeholder="Nome" required />
                 <input type="email" placeholder="Email" required />
                 <input type="password" placeholder="Senha" required />
-                <input type="text" placeholder="OAB" required />
+                <input type="text" placeholder="OAB" class="OAB" required />
                 <select name="planos" id="planos" required>
                     <option style="display:none">Escolha um plano</option>
                     <option value="planogratis">Grátis</option>
@@ -261,12 +261,12 @@
         </div>
         <div class="form-container sign-in-container">
             <form action="#">
-                <h1>Cliente</h1>
+                <h1>consumidor</h1>
                 <span>Crie sua conta agora</span>
                 <input type="text" placeholder="Nome" />
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
-                <input type="text" placeholder="CPF" />
+                <input type="text" placeholder="CPF" class="cpf" />
                 <select name="planos" id="planos" required>
                     <option style="display:none">Escolha um plano</option>
                     <option value="planogratis">Grátis</option>
@@ -302,6 +302,15 @@
 
         clienteButton.addEventListener('click', () => {
             container.classList.remove("right-panel-active");
+        });
+    </script>
+
+    <script src="script/cleave.min.js"></script>
+    <script>
+        var cleave = new Cleave('.cpf', {
+            delimiters: ['.', '.', '-'],
+            blocks: [3, 3, 3, 2],
+            uppercase: true
         });
     </script>
 </body>
