@@ -1,30 +1,17 @@
-- base
-https://www.youtube.com/watch?v=00gyCtIQp8E
-https://github.com/johnkomarnicki/modern-landing-page-with-tailwinds
-
-- components
-https://tailwindui.com/components
-
-- docs
-https://tailwindcss.com/docs/installation
-
 ### to do
 
-- [x]  ajeitar parte dos planos
-https://flowbite.com/blocks/marketing/pricing/
+- [x]  planos
 
-- [ ]  ajeitar parte do cadastro
-https://flowbite.com/blocks/marketing/register/
+- [ ] pagina advogado - lista todos
+nela botao de pesquisa
 
-- [ ]  "Back to top" button
-https://tailwind-elements.com/docs/standard/components/scroll-back-to-top-button/
+- [ ] pagina do perfil do adv - ao ser clicado
+https://freefrontend.com/tailwind-profiles/
+https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/profile
+ter foto, estrelas de avaliação, descrição, localizacao
 
-- [ ]  auto text typing effect
-https://mattboldt.com/demos/typed-js/
-https://github.com/gerssivaldosantos/gerssivaldosantos.github.io
+- [ ] conta do usuario
+https://freefrontend.com/tailwind-profiles/
+https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/profile
 
-- [ ] scroll down when click button
-https://github.com/cferdinandi/smooth-scroll
-
-- [ ] User Select "select-none"
-see fields that apply*
+- [ ] configurações
