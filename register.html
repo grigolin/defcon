@@ -62,6 +62,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: transform 80ms ease-in;
+            cursor: pointer;
         }
 
         button:active {
@@ -250,12 +251,12 @@
                 <input type="email" placeholder="Email" required />
                 <input type="password" placeholder="Senha" required />
                 <input type="text" placeholder="OAB" class="OAB" required />
-                <select name="planos" id="planos" required>
+                <!-- <select name="planos" id="planos" required>
                     <option style="display:none">Escolha um plano</option>
                     <option value="planogratis">Grátis</option>
                     <option value="planobasico">Plano Básico</option>
                     <option value="planopremium">Plano Premium</option>
-                </select>
+                </select> -->
                 <button>Cadastrar</button>
             </form>
         </div>
@@ -267,12 +268,12 @@
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <input type="text" placeholder="CPF" class="cpf" />
-                <select name="planos" id="planos" required>
+                <!-- <select name="planos" id="planos" required>
                     <option style="display:none">Escolha um plano</option>
                     <option value="planogratis">Grátis</option>
                     <option value="planobasico">Plano Básico</option>
                     <option value="planopremium">Plano Premium</option>
-                </select>
+                </select> -->
                 <button>Cadastrar</button>
             </form>
         </div>
@@ -281,12 +282,12 @@
                 <div class="overlay-panel overlay-left">
                     <h1>É consumidor?</h1>
                     <p>Para acessar a plataforma nesse instante, faça sua conta!</p>
-                    <button class="ghost" id="clientebotao">Sou consumidor</button>
+                    <button class="ghost hover:cursor-pointer" id="clientebotao">Sou consumidor</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>É advogado?</h1>
                     <p>Para acessar a plataforma nesse instante, faça sua conta!</p>
-                    <button class="ghost" id="advogadobotao">Sou advogado</button>
+                    <button class="ghost hover:cursor-pointer" id="advogadobotao">Sou advogado</button>
                 </div>
             </div>
         </div>
