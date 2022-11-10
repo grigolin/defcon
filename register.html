@@ -251,13 +251,14 @@
                 <input type="email" placeholder="Email" required />
                 <input type="password" placeholder="Senha" required />
                 <input type="text" placeholder="OAB" class="OAB" required />
+                <input type="text" placeholder="CEP" class="cep" />
                 <!-- <select name="planos" id="planos" required>
                     <option style="display:none">Escolha um plano</option>
                     <option value="planogratis">Grátis</option>
                     <option value="planobasico">Plano Básico</option>
                     <option value="planopremium">Plano Premium</option>
                 </select> -->
-                <button>Cadastrar</button>
+                <button style="margin-top: 15px;">Cadastrar</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
@@ -266,15 +267,16 @@
                 <span>Crie sua conta agora</span>
                 <input type="text" placeholder="Nome" />
                 <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Senha" />
                 <input type="text" placeholder="CPF" class="cpf" />
+                <input type="text" placeholder="CEP" class="cep" />
                 <!-- <select name="planos" id="planos" required>
                     <option style="display:none">Escolha um plano</option>
                     <option value="planogratis">Grátis</option>
                     <option value="planobasico">Plano Básico</option>
                     <option value="planopremium">Plano Premium</option>
                 </select> -->
-                <button>Cadastrar</button>
+                <button style="margin-top: 15px;">Cadastrar</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -311,6 +313,12 @@
         var cleave = new Cleave('.cpf', {
             delimiters: ['.', '.', '-'],
             blocks: [3, 3, 3, 2],
+            uppercase: true
+        });
+
+        var cleave = new Cleave('.cep ARRUMRA AQUI', {
+            delimiters: ['-'],
+            blocks: [5, 3],
             uppercase: true
         });
     </script>
