@@ -318,16 +318,36 @@
             uppercase: true
         });
 
+        var cleave = new Cleave('.OAB', {
+            blocks: [6],
+            uppercase: true,
+            numericOnly: true
+        });
+
         new Cleave('.cepconsumidor', {
             delimiters: ['-'],
             blocks: [5, 3],
-            uppercase: true
+            uppercase: true,
+            numericOnly: true
         });
 
         new Cleave('.cepadvogado', {
             delimiters: ['-'],
             blocks: [5, 3],
-            uppercase: true
+            uppercase: true,
+            numericOnly: true
+        });
+        
+        new Cleave('.telefoneadvogado', {
+            delimiters: ['(', ') ', '-'],
+            blocks: [0, 2, 5, 4],
+            numericOnly: true,
+        });
+
+        new Cleave('.telefoneconsumidor', {
+            delimiters: ['(', ') ', '-'],
+            blocks: [0, 2, 5, 4],
+            numericOnly: true,
         });
 
     </script>
