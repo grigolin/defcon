@@ -1,6 +1,6 @@
 <h1 align="center">DEFCON - Defesa do consumidor</h1>
 
-- ## Oque é
+- ## O que é
 
 Sistema feito com JAVA, para
 
