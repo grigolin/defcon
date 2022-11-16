@@ -251,7 +251,8 @@
                 <input type="email" placeholder="Email" required />
                 <input type="password" placeholder="Senha" required />
                 <input type="text" placeholder="OAB" class="OAB" required />
-                <input type="text" placeholder="CEP" class="cep" />
+                <input type="text" placeholder="CEP" class="cepadvogado" />
+                <input type="text" placeholder="Telefone" class="telefoneadvogado" />
                 <!-- <select name="planos" id="planos" required>
                     <option style="display:none">Escolha um plano</option>
                     <option value="planogratis">Grátis</option>
@@ -269,7 +270,8 @@
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Senha" />
                 <input type="text" placeholder="CPF" class="cpf" />
-                <input type="text" placeholder="CEP" class="cep" />
+                <input type="text" placeholder="CEP" class="cepconsumidor" />
+                <input type="text" placeholder="Telefone" class="telefoneconsumidor" />
                 <!-- <select name="planos" id="planos" required>
                     <option style="display:none">Escolha um plano</option>
                     <option value="planogratis">Grátis</option>
@@ -316,11 +318,18 @@
             uppercase: true
         });
 
-        var cleave = new Cleave('.cep ARRUMRA AQUI', {
+        new Cleave('.cepconsumidor', {
             delimiters: ['-'],
             blocks: [5, 3],
             uppercase: true
         });
+
+        new Cleave('.cepadvogado', {
+            delimiters: ['-'],
+            blocks: [5, 3],
+            uppercase: true
+        });
+
     </script>
 </body>
 
