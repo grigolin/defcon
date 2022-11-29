@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <style>
         .bg-black-alt {
@@ -24,6 +28,42 @@
 
         .border-black-alt {
             border-color: #191919;
+        }
+
+        body {
+            background: #eee
+        }
+
+        .date {
+            font-size: 11px
+        }
+
+        .comment-text {
+            font-size: 12px
+        }
+
+        .fs-12 {
+            font-size: 12px
+        }
+
+        .shadow-none {
+            box-shadow: none
+        }
+
+        .name {
+            color: #007bff
+        }
+
+        .cursor:hover {
+            color: blue
+        }
+
+        .cursor {
+            cursor: pointer
+        }
+
+        .textarea {
+            resize: none
         }
     </style>
 
@@ -38,7 +78,7 @@
 
             <div class="w-1/2 pl-2 md:pl-0">
                 <a class="text-gray-100 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
-                    <i class="fa-solid fa-scale-balanced text-blue-400 pr-3"></i> DEFCON
+                    <i class="fas fa-moon text-blue-400 pr-3"></i> DEFCON
                 </a>
             </div>
             <div class="w-1/2 pr-0">
@@ -97,11 +137,12 @@
                 <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
                     <li class="mr-6 my-2 md:my-0">
                         <a href="homeConsumidor.html"
-                            class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-100 border-b-2 border-gray-900 hover:border-blue-400">
+                            class="block py-1 md:py-3 pl-1 align-middle text-blue-400 no-underline hover:text-gray-100 border-b-2 border-blue-400 hover:border-blue-400">
                             <i class="fas fa-home fa-fw mr-3 text-blue-400"></i><span
                                 class="pb-1 md:pb-0 text-sm">Home</span>
                         </a>
                     </li>
+
                     <li class="mr-6 my-2 md:my-0">
                         <a href="consumidores.html"
                             class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-100 border-b-2 border-gray-900  hover:border-purple-400">
@@ -110,7 +151,7 @@
                     </li>
                     <li class="mr-6 my-2 md:my-0">
                         <a href="postagensConsumidores.html"
-                            class="block py-1 md:py-3 pl-1 align-middle text-green-500 no-underline hover:text-gray-100 border-b-2 border-green-400  hover:border-green-400">
+                            class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-100 border-b-2 border-gray-900  hover:border-green-400">
                             <i class="fas fa-chart-area fa-fw mr-3"></i><span
                                 class="pb-1 md:pb-0 text-sm">Postagens</span>
                         </a>
@@ -140,128 +181,143 @@
 
         </div>
     </nav>
-    <div class="container mx-auto pt-20 ">
 
-        <div class="mx-auto
-            <form action="" method="get" class="w-full p-4">
-              <div class="mb-2 mt-3">
-                <input type="text" class="p-2 border rounded focus:outline-none focus:ring-gray-300 focus:ring-1 my-2 " placeholder="Título">
-                <textarea
-                  class="w-full h-20 p-2 border rounded focus:outline-none focus:ring-gray-300 focus:ring-1"
-                  name="comment"
-                  placeholder="Descrição"></textarea>
-                  <!-- <input type="text" class="w-full border rounded focus:outline-none focus:ring-gray-300 focus:ring-1" placeholder="Descrição"> -->
-              </div>
-              <div>
-                <button class="px-3 py-2 text-sm text-blue-100 bg-blue-600 rounded">
-                  Postar
-                </button>
-              </div>
-            </form>
-          </div>
+    <!--Container-->
+    <div class="container w-full mx-auto pt-20">
+
+        <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
+
+            <div class="mt-2">
+
+                <div class="container mt-5">
+
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="col-md-10">
+
+                            <div class="headings d-flex justify-content-between align-items-center mb-1">
+                                <h5>Comentários</h5>
+                            </div>
+                            <div class="card p-3">
+
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div class="user d-flex flex-row align-items-center">
+
+                                        <img src="https://i.imgur.com/hczKIze.jpg" width="30"
+                                            class="user-img rounded-circle mr-2">
+                                        <span><small class="font-weight-bold text-primary">alex
+                                                poatan</small>
+                                            <small class="font-weight-bold">Hmm, This poster looks
+                                                cool</small></span>
+                                    </div>
+                                    <small>2 days ago</small>
+
+                                </div>
+
+                            </div>
+                            <div class="card p-3 mt-2">
+
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div class="user d-flex flex-row align-items-center">
+
+                                        <img src="https://i.imgur.com/C4egmYM.jpg" width="30"
+                                            class="user-img rounded-circle mr-2">
+                                        <span><small class="font-weight-bold text-primary">josue
+                                                teodoro</small>
+                                            <small class="font-weight-bold">Loving your work and profile!
+                                            </small></span>
+
+                                    </div>
+                                    <small>3 days ago</small>
+                                </div>
 
 
-        <div class="w-full px-4 md:px-0 md:mt-8 mb-8 text-gray-800 leading-normal">
 
-            <!-- Component Start -->
+                            </div>
 
-            <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 xl:max-w-full">
-                <!-- Tile 1 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
+                            <div class="card p-3 mt-2">
+
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div class="user d-flex flex-row align-items-center">
+
+                                        <img src="https://i.imgur.com/0LKZQYM.jpg" width="30"
+                                            class="user-img rounded-circle mr-2">
+                                        <span><small class="font-weight-bold text-primary">Charles do
+                                                bronx</small>
+                                            <small class="font-weight-bold">Really cool Which filter are you
+                                                using? </small></span>
+                                    </div>
+                                    <small>3 days ago</small>
+
+                                </div>
+
+                            </div>
+
+                            <div class="bg-light p-2 mt-2">
+                                <div class="d-flex flex-row align-items-start"><img class="rounded-circle"
+                                        src="img/fotodocara.png" width="40"><textarea
+                                        class="form-control ml-1 shadow-none textarea"></textarea></div>
+                                <div class="mt-2 text-right"><button class="btn btn-primary btn-sm shadow-none"
+                                        type="button">Comentar</button><button
+                                        class="btn btn-outline-primary btn-sm ml-1 shadow-none"
+                                        type="button">Limpar</button></div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Card-->
+
+    </div>
+    </div>
+    </div>
+    <!--/Container-->
+
+    <footer class="bg-gray-900 border-t border-gray-400 shadow">
+        <div class="container max-w-md mx-auto flex py-8">
+            <div class="w-full mx-auto flex flex-wrap">
+                <div class="flex w-full md:w-1/2 ">
+                    <div class="px-8">
+                        <h3 class="font-bold font-bold text-gray-100">Sobre</h3>
+                        <p class="py-4 text-gray-600 text-sm">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
                     </div>
                 </div>
-                <!-- Tile 2 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
-                    </div>
-                </div>
-                <!-- Tile 3 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
-                    </div>
-                </div>
-                <!-- Tile 4 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
-                    </div>
-                </div>
-                <!-- Tile 5 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
-                    </div>
-                </div>
-                <!-- Tile 6 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
-                    </div>
-                </div>
-                <!-- Tile 7 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
-                    </div>
-                </div>
-                <!-- Tile 8 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
-                    </div>
-                </div>
-                <!-- Tile 8 -->
-                <div class="flex bg-gray-200 rounded-lg p-4 m-2">
-                    <div class="w-32 bg-gray-400 rounded-lg"></div>
-                    <div class="flex flex-col items-start ml-4">
-                        <h4 class="text-xl font-semibold">Heading</h4>
-                        <p class="text-sm">Some text about the thing that goes over a few lines.</p>
-                        <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
-                            href="#">Click Here</a>
+
+                <div class="flex w-full md:w-1/2">
+                    <div class="px-8">
+                        <h3 class="font-bold font-bold text-gray-100">Social</h3>
+                        <ul class="list-reset items-center text-sm pt-3">
+                            <li>
+                                <a class="inline-block text-gray-600 no-underline hover:text-gray-100 hover:text-underline py-1"
+                                    href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="inline-block text-gray-600 no-underline hover:text-gray-100 hover:text-underline py-1"
+                                    href="#">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a class="inline-block text-gray-600 no-underline hover:text-gray-100 hover:text-underline py-1"
+                                    href="#">Novidades</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- Component End  -->
-
         </div>
-    </div>
+    </footer>
 
     <script>
 
