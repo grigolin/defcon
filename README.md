@@ -2,7 +2,7 @@
 
 - ## O que é
 
-Sistema feito com JAVA, para
+Sistema feito em JAVA
 
 - ## Funcionamento
 
