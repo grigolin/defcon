@@ -1,0 +1,60 @@
+CREATE TABLE pessoa (
+idPessoa serial NOT NULL,
+estadoPessoa varchar(15) not null,
+nomePessoa varchar,
+loginPessoa varchar not null,
+senhaPessoa varchar not null,
+cepPessoa varchar,
+enderecoPessoa varchar,
+telefonePessoa varchar,
+bairroPessoa varchar,
+cidadePessoa varchar,
+tipoPessoa varchar not null,
+CONSTRAINT pk_pessoa PRIMARY KEY (idPessoa)
+);
+
+CREATE TABLE consumidor (
+idConsumidor serial NOT NULL,
+cpfConsumidor varchar,
+idPessoa integer NOT NULL,
+CONSTRAINT pk_consumidor PRIMARY KEY (idConsumidor),
+CONSTRAINT pk_consumidor_pessoa FOREIGN KEY (idPessoa) REFERENCES pessoa (idPessoa)
+);
+
+CREATE TABLE advogado (
+idAdvogado serial NOT NULL,
+oabAdvogado varchar,
+idPessoa integer NOT NULL,
+CONSTRAINT pk_advogado PRIMARY KEY (idAdvogado),
+CONSTRAINT pk_advogado_pessoa FOREIGN KEY (idPessoa) REFERENCES pessoa (idPessoa)
+);
+
+CREATE TABLE postagem (
+idPostagem serial NOT NULL,
+tituloPostagem varchar,
+descricaoPostagem varchar,
+CONSTRAINT pk_postagem PRIMARY KEY (idPostagem)
+);
+
+CREATE TABLE comentario(
+idComentario serial not null,
+descricaoComentario varchar not null,
+idPostagem integer not null,
+CONSTRAINT pk_comentario PRIMARY KEY (idComentario),
+CONSTRAINT fk_comentario_postagem FOREIGN KEY (idPostagem) REFERENCES postagem (idPostagem)
+);
+
+INSERT INTO postagem (tituloPostagem, descricaoPostagem) VALUES ('A ética do Advogado','Cabe a cada advogado assumir uma postura ética, que não deixa de ser também uma postura político-profissional, no sentido de realizar uma advocacia cidadã.');
+INSERT INTO postagem (tituloPostagem, descricaoPostagem) VALUES ('A luta pelo direito e pela justiça é imprescritível','O diploma de jubilamento advocatício expressa meritória honraria à classe e enaltece os homenageados.');
+INSERT INTO postagem (tituloPostagem, descricaoPostagem) VALUES ('O advogado e a eloquência fora dos tribunais','Comento episódio em que, durante reunião gastronômica promovida por grupo de advogados notáveis, um deles, erguendo sua taça num brinde ao mais famigerado dos convivas, teria dito que adiantava pouco punir o infrator, se cometido já o crime. Ainda: que o castigo era ineficaz contra a corrupção.');
+
+INSERT INTO comentario (descricaoComentario, idPostagem) VALUES ('Que legal.','1');
+INSERT INTO comentario (descricaoComentario, idPostagem) VALUES ('Interessante.','1');
+
+INSERT INTO pessoa (nomePessoa, loginPessoa, senhaPessoa, cepPessoa, enderecoPessoa, telefonePessoa, bairroPessoa, cidadePessoa, tipoPessoa, estadoPessoa) VALUES ('Henrique Toledo','Toledo','123','15600076','Rua Pernambuco','17997940171','Centro','Fernandópolis','C','SP');
+INSERT INTO consumidor (cpfConsumidor, idPessoa) VALUES ('48785125806','1');
+
+INSERT INTO pessoa (nomePessoa, loginPessoa, senhaPessoa, cepPessoa, enderecoPessoa, telefonePessoa, bairroPessoa, cidadePessoa, tipoPessoa, estadoPessoa) VALUES ('Thiago Rodrigues','Thiago','123','38406043','Rua Cláudio Ferreira de Abreu','17997940171','Aclimação','Uberlândia','A','MG');
+INSERT INTO advogado (oabAdvogado, idPessoa) VALUES ('123456','2');
+
+-- :D --
